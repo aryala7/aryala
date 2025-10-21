@@ -1,141 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Under Maintenance</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
-
-    :root{
-      --bg1:#2a0050;
-      --bg2:#5b2b9a;
-      --accent:#b98cff;
-      --glass: rgba(255,255,255,0.06);
-    }
-    html,body{height:100%;}
-    body{
-      margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: radial-gradient(1200px 600px at 10% 10%, rgba(88,31,135,0.22), transparent 15%),
-                  radial-gradient(1000px 600px at 90% 90%, rgba(183,132,255,0.12), transparent 15%),
-                  linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 100%);
-      color: white;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-    }
-
-    .scene{
-      width:min(1100px,94vw);
-      height:min(640px,78vh);
-      position:relative;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      border-radius:20px;
-      box-shadow: 0 10px 40px rgba(20,0,40,0.5), inset 0 1px 0 rgba(255,255,255,0.03);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.05));
-      backdrop-filter: blur(6px) saturate(120%);
-      text-align:center;
-      gap:20px;
-    }
-
-    h1{
-      margin:0;
-      font-size: clamp(28px, 6vw, 72px);
-      letter-spacing:8px;
-      text-align:center;
-      text-transform:uppercase;
-      padding: 18px 36px;
-      border-radius:12px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      box-shadow: 0 6px 20px rgba(0,0,0,0.45);
-      transform: translateZ(0);
-      position:relative;
-    }
-
-    p{
-      font-size: clamp(16px, 2vw, 24px);
-      max-width:700px;
-      color:#e8d6ff;
-      line-height:1.6;
-      margin:0 20px;
-    }
-
-    .farsi{
-      font-family: 'Vazir', sans-serif;
-      font-size: clamp(16px, 2vw, 22px);
-      direction: rtl;
-      color:#d8c2ff;
-    }
-
-    /* decorative items */
-    .deco{
-      position:absolute;
-      pointer-events:none;
-      opacity:0.95;
-    }
-
-    .handcuffs{width:220px; right:6%; top:6%; transform:rotate(-12deg);}
-    .ring1{width:90px; left:6%; top:8%; transform:rotate(-6deg);}
-    .bracelet{width:140px; left:5%; bottom:7%; transform:rotate(8deg);}
-    .chain{width:200px; right:5%; bottom:6%; transform:rotate(6deg);}
-    .ring2{width:72px; right:40%; top:4%;}
-
-    .float{animation: floaty 6s ease-in-out infinite;}
-    .float-slow{animation: floaty 10s ease-in-out infinite;}
-
-    @keyframes floaty{
-      0%{transform:translateY(0) rotate(var(--r,0deg));}
-      50%{transform:translateY(-10px) rotate(calc(var(--r,0deg) * 1.05));}
-      100%{transform:translateY(0) rotate(var(--r,0deg));}
-    }
-
-    h1::after{
-      content:"";
-      position:absolute;
-      left:0; right:0; top:0; bottom:0;
-      border-radius:12px;
-      mix-blend-mode: overlay;
-      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 45%, rgba(255,255,255,0.18) 55%, transparent 100%);
-      transform: translateX(-150%);
-      animation: shine 3.6s linear infinite;
-      pointer-events:none;
-    }
-    @keyframes shine{100%{transform:translateX(150%);} }
-
-    @media (max-width:700px){
-      .handcuffs,.chain{display:none}
-      .scene{border-radius:14px}
-      h1{letter-spacing:4px;padding:12px 18px}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Maintenance</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for aesthetics */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
 </head>
-<body>
-  <div class="scene" role="img" aria-label="Decorative jewelry and handcuffs around an under maintenance sign">
-    <h1>UNDER MAINTENANCE</h1>
-    <p>We're polishing the jewels and tightening the mechanisms. Be back soon!</p>
-    <p class="farsi">در این مکان در آینده چیز‌های هیجان انگیزی به نمایش گذاشته می‌شود</p>
+<body class="bg-gray-900 min-h-screen flex items-center justify-center p-4">
 
-    <!-- existing SVGs -->
-    <!-- Handcuffs SVG -->
-    <svg class="deco handcuffs float" style="--r:-12deg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#dac0ff" /><stop offset="1" stop-color="#7a3ad6"/></linearGradient>
-      </defs>
-      <g fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-        <ellipse cx="45" cy="60" rx="34" ry="24" fill="rgba(255,255,255,0.02)" stroke-width="6"/>
-        <ellipse cx="155" cy="60" rx="34" ry="24" fill="rgba(255,255,255,0.02)" stroke-width="6"/>
-        <path d="M78 60 C98 50 102 40 122 36" stroke-width="5" stroke-opacity="0.9"/>
-        <rect x="54" y="12" width="28" height="10" rx="3" fill="url(#g1)" transform="rotate(6 68 17)" opacity="0.9"/>
-        <rect x="118" y="98" width="22" height="10" rx="3" fill="url(#g1)" transform="rotate(-10 129 103)" opacity="0.85"/>
-      </g>
-    </svg>
+    <!-- Main Container: Deep Purple Gradient -->
+    <div class="w-full max-w-4xl p-10 md:p-16 rounded-3xl shadow-2xl 
+                bg-gradient-to-br from-violet-900/80 to-fuchsia-800/80 
+                border border-violet-700 backdrop-blur-sm 
+                flex flex-col items-center justify-center text-center">
 
-    <!-- other SVGs remain unchanged -->
-  </div>
+        <!-- Main Title -->
+        <h1 class="text-white text-7xl sm:text-8xl md:text-9xl 
+                   font-extrabold tracking-tight mb-6 
+                   animate-pulse transition duration-500">
+            Hello...
+        </h1>
+
+        <!-- Subtext / Maintenance Message -->
+        <p class="text-violet-200 text-xl sm:text-2xl md:text-3xl 
+                  font-light leading-relaxed max-w-2xl">
+            <span class="block mt-2 font-semibold text-white">
+                In this place, amazing things will be shown here in the future.
+            </span>
+            Please check back soon!
+        </p>
+
+        <!-- Placeholder Icon/Separator -->
+        <div class="mt-8 text-violet-400 text-4xl">
+            —
+        </div>
+    </div>
+
 </body>
 </html>
