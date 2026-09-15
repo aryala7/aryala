@@ -1,6 +1,6 @@
-baseURL = "baseURL = "https://aryala7.github.io/notebook/""
+baseURL = "baseURL = "https://aryala7.github.io/aryala7/"
 languageCode = "de-de"
-title = "Dein Name"
+title = "Arya"
 theme = "typo"
 
 [params]
@@ -11,10 +11,10 @@ hideHeader = false
 
 homeIntroTitle = "Hallo!"
 homeIntroContent = """
-Ich bin **Dein Name**. Hier schreibe ich über Technologie,
+Ich bin der **Arya**. Hier schreibe ich über Technologie,
 Projekte und Dinge, die mich beschäftigen.
 
-Du findest mich auch auf [GitHub](https://github.com/dein-name).
+Du findest mich auch auf [GitHub](https://github.com/aryala7).
 """
 
 homeCollectionTitle = "Artikel"
@@ -24,7 +24,7 @@ listSummaries = false
 listDateFormat = "2. January 2006"
 
 showFooter = true
-footerContent = "© Dein Name"
+footerContent = "© Arya Lavassani"
 
 [[params.menu]]
 name = "home"
@@ -44,7 +44,7 @@ url = "/about"
 
 [[params.social]]
 name = "github"
-url = "https://github.com/dein-name"
+url = "https://github.com/aryala7"
 
 [markup]
 [markup.highlight]
