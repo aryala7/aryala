@@ -1,0 +1,51 @@
+baseURL = "baseURL = "https://aryala7.github.io/notebook/""
+languageCode = "de-de"
+title = "Dein Name"
+theme = "typo"
+
+[params]
+description = "Persönliche Website und Notizen"
+theme = "auto"
+colorPalette = "default"
+hideHeader = false
+
+homeIntroTitle = "Hallo!"
+homeIntroContent = """
+Ich bin **Dein Name**. Hier schreibe ich über Technologie,
+Projekte und Dinge, die mich beschäftigen.
+
+Du findest mich auch auf [GitHub](https://github.com/dein-name).
+"""
+
+homeCollectionTitle = "Artikel"
+homeCollection = "posts"
+paginationSize = 20
+listSummaries = false
+listDateFormat = "2. January 2006"
+
+showFooter = true
+footerContent = "© Dein Name"
+
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "artikel"
+url = "/posts"
+
+[[params.menu]]
+name = "projekte"
+url = "/projects"
+
+[[params.menu]]
+name = "über mich"
+url = "/about"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/dein-name"
+
+[markup]
+[markup.highlight]
+noClasses = false
