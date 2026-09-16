@@ -28,11 +28,11 @@ footerContent = "© Arya Lavassani"
 
 [[params.menu]]
 name = "home"
-url = "/"
+url = "/aryala7"
 
 [[params.menu]]
 name = "artikel"
-url = "/posts"
+url = "/aryala7/posts"
 
 [[params.menu]]
 name = "projekte"

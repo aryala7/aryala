@@ -4,8 +4,6 @@ draft = false
 title = 'Hello World'
 +++
 
-# Hello World
-
 In einer Zeit, in der immer mehr Texte von KI geschrieben werden, hatte ich irgendwie das Bedürfnis, einer alten Internettradition treu zu bleiben: dem persönlichen Blog.
 
 Also gibt es jetzt diese Website.
